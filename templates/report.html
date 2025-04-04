@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block content %}
+<div class="jumbotron" style="background-color: cornflowerblue">
+  <p><h1>Let see how you performed!!</h1></p>
+  {% if has_lower and has_upper and ends_with_digit %}
+  <p>Congratulations!! All the conditions have been met!</p>
+
+  {% elif not has_lower %}
+  <p>You did not use a lowercase character</p>
+
+  {% elif not has_upper %}
+  <p>You did not use an uppercase character</p>
+
+  {% elif not ends_with_digit %}
+  <p>You did not end your username with a number</p>
+
+  {% endif %}
+</div>
+
+{% endblock %}
